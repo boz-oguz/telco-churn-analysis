@@ -108,7 +108,7 @@ The objective is not only to understand *who* is churning, but also *why* they a
 
 ## Status
 
-> In Progress
+> In Progress (Ongoing EDA)
 
 ---
 
