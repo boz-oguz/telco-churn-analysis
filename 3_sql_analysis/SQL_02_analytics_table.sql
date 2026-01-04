@@ -37,8 +37,26 @@ FROM customer_raw;
 -- Sanity check
 
 SELECT COUNT(*)
-FROM customer_analytics; -- All created with 7043 rows
+FROM customer_analytics ca; -- All created with 7043 rows
 
 SELECT *
-FROM customer_analytics
+FROM customer_analytics ca
 LIMIT 5; -- Correct fields has created
+
+SELECT
+	ca.churn,
+	ca.churn_flag,
+	COUNT(*)
+FROM customer_analytics ca
+GROUP BY ca.churn, ca.churn_flag; -- Correct match
+
+SELECT 
+	tenure_group,
+	COUNT(*)
+FROM customer_analytics ca
+GROUP BY ca.tenure_group
+ORDER BY ca.tenure_group; -- No null group, buckets are set
+
+-- Analytics-ready customer table
+-- Contains explicit churn flags and tenure segmentation
+-- Used as the single source of truth for KPI queries and BI dashboards
