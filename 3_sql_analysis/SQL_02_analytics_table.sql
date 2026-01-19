@@ -29,7 +29,7 @@ SELECT
 	CASE
 		WHEN tenure < 12 THEN '0-12'
 		WHEN tenure BETWEEN 12 AND 24 THEN '12-24'
-		WHEN tenure BETWEEN 25 AND 48 THEN '25-48'
+		WHEN tenure BETWEEN 25 AND 48 THEN '24-48'
 		ELSE '48+'
 	END AS tenure_group
 FROM customer_raw;
