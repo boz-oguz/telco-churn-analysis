@@ -1,117 +1,103 @@
-# Telco Customer Churn Analysis
+# Telco Churn Analysis
 
-## Business Problem
+![Python](https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-FF5733?style=for-the-badge&logo=postgresql&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 
-Customer churn is a critical challenge in the telecommunications industry, directly impacting revenue stability and customer lifetime value. This project focuses on analyzing customer-level data to identify churn drivers, high-risk customer segments, and revenue-at-risk areas in order to support data-driven retention strategies.
+## Project Overview
+This project analyzes customer churn for a telecommunications company, focusing on **patterns, high-risk revenue segments, and top churn drivers**. It combines **Python EDA**, **SQL analytics**, and **interactive Tableau dashboards** for end-to-end insights.
 
-The objective is not only to understand *who* is churning, but also *why* they are churning and *which actions* the business could prioritize.
-
----
-
-## Dataset Overview
-
-* **Source**: IBM Telco Customer Churn Dataset (public)
-* **Records**: ~7,000 customers
-* **Granularity**: One row per customer
-* **Key Entities**:
-
-  * Customer demographics
-  * Contract and subscription details
-  * Billing and payment information
-  * Churn indicator
-* **Time Dimension**: Customer tenure (in months)
-* **Data Type**: Structured, tabular
+**Key Objectives:**
+- Explore churn trends across customer segments
+- Identify high-risk revenue segments
+- Determine top drivers of churn
+- Provide actionable insights for customer retention
 
 ---
 
-## Tools & Stack
-
-* **Python**: Pandas, NumPy, Matplotlib, Seaborn
-* **Database**: PostgreSQL
-* **SQL**: Analytical queries for KPI reporting
-* **BI Tool**: Tableau
-* **Version Control**: Git & GitHub
-
----
-
-## Analytical Approach
-
-1. **Exploratory Data Analysis (Python)**
-
-   * Data quality assessment
-   * Univariate and bivariate analysis
-   * Identification of churn drivers
-
-2. **Data Preparation**
-
-   * Feature cleaning and standardization
-   * Business KPI definition
-   * Creation of analysis-ready dataset
-
-3. **SQL Analysis (PostgreSQL)**
-
-   * Loading raw and processed data into relational tables
-   * Writing KPI-driven analytical queries
-   * Preparing data for BI consumption
-
-4. **Baseline Modeling (Optional)**
-
-   * Logistic Regression for churn probability estimation
-   * Model used as analytical support, not core focus
-
-5. **BI Dashboard (Tableau)**
-
-   * Interactive churn overview
-   * Segment-level drill-downs
-   * Management-focused KPI visualization
+## Dataset
+- Source: Telco customer data (synthetic/realistic)  
+- Key columns:
+  - `customerid`, `gender`, `seniorcitizen`, `partner`, `dependents`
+  - `tenure`, `contract`, `paymentmethod`, `monthlycharges`, `totalcharges`
+  - `churn_flag`, `revenue_at_risk`, `high_risk_customers`, etc.
+- Tables:
+  - `customer_raw`: raw imported & cleaned dataset
+  - `customer_analytics`: derived metrics and calculated fields for dashboards
 
 ---
 
-## Key Metrics
+## Methodology
 
-* Overall Churn Rate
-* Churn Rate by Contract Type
-* Average Customer Tenure
-* Monthly Charges Distribution
-* Estimated Revenue at Risk
+### 1. Python EDA
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`
+- Steps:
+  - Univariate and bivariate analysis
+  - Data cleaning and type corrections
+  - Feature engineering (tenure groups, revenue at risk, flags)
+
+### 2. SQL Analytics
+- Created `customer_analytics` table
+- Calculated:
+  - Churn rate per segment
+  - Revenue at risk per customer group
+  - Aggregated KPIs for dashboards
+- Advanced queries:
+  - Grouping by tenure, contract, revenue bucket
+  - Window functions for ranking and diagnostics
+
+### 3. Tableau Dashboards
+| Dashboard | Focus | Sheets | Key Metrics |
+|-----------|-------|-------|-------------|
+| **Dashboard 1 — Churn Overview** | Descriptive churn patterns | Churn by Tenure, Contract, Gender, Seniority, Partner, Dependents | Counts, % churn |
+| **Dashboard 2 — Customer Churn Insights** | Financial impact & diagnostics | Revenue at Risk by Tenure, Revenue at Risk by Contract, Monthly Charges vs Churn, High-Risk Customers by Revenue Bucket, Top Churn Drivers | Revenue at Risk, Churn Rate, High-Risk Customers |
+
+The analysis is presented as an interactive Tableau Story composed of two dashboards.  
+Each dashboard focuses on a different analytical objective.
+
+### Dashboard 1 — Churn Overview
+![Dashboard 1](4_bi_dashboard/db_1.png)
+
+**Objective:**  
+Provide a descriptive overview of customer churn patterns across tenure, contract type, and customer demographics.
 
 ---
 
-## Business Impact | Geschäftlicher Mehrwert
+### Dashboard 2 — Financial Impact & Diagnostics
+![Dashboard 2](4_bi_dashboard/db_2.png)
 
-**EN**
+**Objective:**  
+Quantify revenue at risk from churned customers and identify high-risk segments and key churn drivers to support retention strategy.
 
-* Identifies customer segments with high churn risk
-* Enables targeted retention strategies instead of generic discounts
-* Supports proactive monitoring of revenue at risk
-* Improves decision-making for customer lifecycle management
+---
 
-**DE (Keywords)**
-
-* Kundenabwanderung
-* Risikosegmente
-* Kundenbindung
-* Umsatzsicherung
-* Entscheidungsunterstützung
-* KPI-Überwachung
+## Key Insights
+- High-paying customers represent the **largest financial risk** if they churn  
+- Churn rates are highest among **short-tenure, month-to-month contract customers**  
+- Partnered or dependent customers generally churn less  
+- Insights provide actionable guidance for **targeted retention and revenue protection**
 
 ---
 
 ## Deliverables
-
-* Python EDA notebooks
-* SQL scripts and analytical queries
-* Interactive Tableau dashboard
-* Business-oriented insights and recommendations
-
----
-
-## Status
-
-> In Progress (Ongoing SQL Analysis)
+- Python notebooks: **EDA & Data Cleaning**
+- SQL scripts: **Analytics & KPI calculations**
+- Tableau dashboards: **Interactive and portfolio-ready**
+- Portfolio screenshots: **consistent 1600×1200 resolution**
+- README.md summarizing approach, methodology, and insights
 
 ---
 
-## Notes
+## Skills Demonstrated
+- **Python:** data wrangling, EDA, visualization  
+- **SQL:** aggregation, window functions, KPI computation  
+- **Tableau:** dashboard design, calculated fields, interactivity  
+- **Data storytelling:** linking metrics to business impact  
 
-This project is designed to reflect a real-world analytics workflow, emphasizing business understanding, structured analysis, and clear communication over complex modeling techniques.
+---
+
+## Screenshots (Portfolio)
+1. **Dashboard 1 — Churn Overview**
+   - Shows churn distribution by tenure, contract, gender, and demographics  
+2. **Dashboard 2 — Customer Churn Insights**
+   - Visualizes revenue at risk, monthly charges distribution, high-risk customers, and top churn drivers  
