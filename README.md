@@ -4,6 +4,15 @@
 ![SQL](https://img.shields.io/badge/SQL-FF5733?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white)
 
+## Executive Summary
+
+This project analyzes customer churn behavior for a telecommunications company using exploratory data analysis, SQL-based feature engineering, and interactive Tableau visualizations.
+
+The analysis identifies key churn drivers across tenure, contract type, and customer demographics, and quantifies the associated revenue at risk. Results show that churn is strongly concentrated among early-tenure customers and those on month-to-month contracts, with a significant financial impact driven by higher-charging customer segments.
+
+The final output is delivered as an interactive Tableau Story combining descriptive churn analysis with financial diagnostics, enabling data-driven retention strategy and prioritization.
+
+
 ## Project Overview
 This project analyzes customer churn for a telecommunications company, focusing on **patterns, high-risk revenue segments, and top churn drivers**. It combines **Python EDA**, **SQL analytics**, and **interactive Tableau dashboards** for end-to-end insights.
 
@@ -96,8 +105,22 @@ Quantify revenue at risk from churned customers and identify high-risk segments 
 
 ---
 
-## Screenshots (Portfolio)
-1. **Dashboard 1 — Churn Overview**
-   - Shows churn distribution by tenure, contract, gender, and demographics  
-2. **Dashboard 2 — Customer Churn Insights**
-   - Visualizes revenue at risk, monthly charges distribution, high-risk customers, and top churn drivers  
+## Business Recommendations
+
+Based on the churn and revenue-at-risk analysis, the following actions are recommended:
+
+1. **Prioritize long-term contract migration**  
+   Customers on month-to-month contracts show the highest churn rates and account for a disproportionate share of revenue at risk. Targeted incentives to migrate these customers to annual or two-year contracts could significantly reduce churn.
+
+2. **Focus retention efforts on early-tenure customers**  
+   Churn is highest within the first 0–12 months. Proactive onboarding, early satisfaction checks, and targeted offers during this period may improve long-term retention.
+
+3. **Monitor high-charge customers closely**  
+   Customers with higher monthly charges contribute more to revenue at risk when churned. Early warning indicators should be established for this segment to trigger retention actions.
+
+4. **Leverage partner and dependent signals**  
+   Customers without partners or dependents exhibit higher churn tendencies. These attributes can be used as supporting signals in churn risk scoring models.
+
+5. **Align retention strategy with financial impact**  
+   Retention initiatives should be prioritized based not only on churn likelihood but also on estimated revenue at risk to maximize business impact.
+
