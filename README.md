@@ -52,11 +52,22 @@ This project analyzes customer churn for a telecommunications company, focusing 
 | **Dashboard 1 — Churn Overview** | Descriptive churn patterns | Churn by Tenure, Contract, Gender, Seniority, Partner, Dependents | Counts, % churn |
 | **Dashboard 2 — Customer Churn Insights** | Financial impact & diagnostics | Revenue at Risk by Tenure, Revenue at Risk by Contract, Monthly Charges vs Churn, High-Risk Customers by Revenue Bucket, Top Churn Drivers | Revenue at Risk, Churn Rate, High-Risk Customers |
 
-**Dashboard 2 Title:**  
-`Customer Churn Insights — Financial & Diagnostic Analysis`  
+The analysis is presented as an interactive Tableau Story composed of two dashboards.  
+Each dashboard focuses on a different analytical objective.
 
-**Dashboard 2 Subtitle:**  
-`Identifying high-risk customers and top churn drivers to maximize retention and minimize revenue loss`
+### Dashboard 1 — Churn Overview
+![Dashboard 1](4_bi_dashboard/db_1.png)
+
+**Objective:**  
+Provide a descriptive overview of customer churn patterns across tenure, contract type, and customer demographics.
+
+---
+
+### Dashboard 2 — Financial Impact & Diagnostics
+![Dashboard 2](4_bi_dashboard/db_2.png)
+
+**Objective:**  
+Quantify revenue at risk from churned customers and identify high-risk segments and key churn drivers to support retention strategy.
 
 ---
 
